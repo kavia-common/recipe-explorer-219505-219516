@@ -1,0 +1,121 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(59,130,246,0.10), rgba(249,250,251,1));
+  border-bottom: 1px solid rgba(100,116,139,0.25);
+  backdrop-filter: blur(6px);
+}
+
+.brandRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px 8px 20px;
+}
+
+.brand {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #64748b;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 8px 20px 16px 20px;
+}
+
+.categoryNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catPill {
+  appearance: none;
+  border: 1px solid rgba(59,130,246,0.35);
+  background: #ffffff;
+  color: #111827;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(17,24,39,0.06);
+}
+
+.catPill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 rgba(17,24,39,0.08);
+}
+
+.catPillActive {
+  border-color: rgba(6,182,212,0.85);
+  background: rgba(6,182,212,0.10);
+}
+
+.searchWrap {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchLabel {
+  color: #64748b;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 12px;
+}
+
+.searchInput {
+  width: 100%;
+  border: 1px solid rgba(100,116,139,0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  background: #ffffff;
+}
+
+.searchInput:focus {
+  border-color: rgba(59,130,246,0.85);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.15);
+}
+
+.favLink {
+  text-decoration: none;
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.35);
+  color: #111827;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+@media (min-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .searchWrap {
+    grid-template-columns: auto 320px auto;
+  }
+}
